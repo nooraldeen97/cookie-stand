@@ -3,3 +3,138 @@ table , th , td , tr{
     border-collapse: collapse;
 
 }
+body{
+    background-color: #ffefcf;
+}
+
+
+#heading{
+    background-color:#ff7a00;
+    height: 100px;
+    }
+    
+    #heading div {
+        float:left;
+        padding-left:70px;
+        padding-top: 15px;
+    }
+    
+    
+    #heading ul li{
+        display: inline-block;
+        padding-top: 40px;
+        padding-left: 5%;
+        margin-left:5% ;
+        
+    }
+    
+    
+    nav ul li a {
+        text-decoration: none;
+        font-weight: 900;
+        color: white;
+    }
+
+    #bigimg{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    
+
+    #location{
+        background-color: #f9e0ae;
+        height: 150px;
+        width: 400px;
+        font-size: 20px;
+        margin-left: 22%;
+ 
+    }
+
+    #hours{
+        background-color: #f9e0ae;
+        height: 150px;
+        width: 400px;
+        font-size: 20px;
+        margin-left: 52%;
+        position:relative;
+        bottom: 150px;
+ 
+    }
+
+    #medimg{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    #medimg img {
+        padding: 10px;
+        height: 300px;
+        width: 270px;
+    
+    }
+
+    #contact{
+        background-color: #f9e0ae;
+        height: 150px;
+        width: 400px;
+        font-size: 20px;
+        margin-left: 22%;
+  
+    }
+
+    #fish{
+        
+        font-size: 20px;
+        margin-left: 50%;
+        position:relative;
+        bottom: 150px;
+ 
+    }
+    #fish img{
+        width:429px;
+        height: 150px;
+    }
+
+    #lot{
+        position: relative;
+        bottom: 140px;
+    }
+
+
+
+    #shirt{
+        font-size: 20px;
+        margin-left: 57%;
+        position:relative;
+        bottom: 150px;
+    }
+
+    #saving{
+        background-color: #ff7a00;
+        height: 250px;
+        width: 400px;
+        font-size: 30px;
+        margin-left: 22%;
+        position: relative;
+        bottom: 450px;
+        text-align: center;
+        color: #f9e0ae;
+    }
+
+
+
+    footer{
+        background-color: #ff7a00;
+        height: 100px;
+        text-align: center;
+        font-size: 20px;
+        padding-top: 30px;
+    
+    }
+       
+        
+
+ 
