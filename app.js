@@ -10,7 +10,7 @@ function randomNumberOf(min, max) {
 
 
 let locationArray = [];
-let totalcookies = 0;
+
 
 
 function Location(name, minCustomer, maxCustomer, avgCookiesPerHour) {
@@ -20,7 +20,7 @@ function Location(name, minCustomer, maxCustomer, avgCookiesPerHour) {
     this.avgCookiesPerHour = avgCookiesPerHour;
     this.customersNumberPerHour = [];
     this.cookiesPurchasedPerHour = [];
-    this.totalcookies = totalcookies;
+    this.totalcookies = 0;
     this.totalcookiesShopPerHour = [];
 
     locationArray.push(this);
