@@ -21,7 +21,6 @@ function Location(name, minCustomer, maxCustomer, avgCookiesPerHour) {
     this.customersNumberPerHour = [];
     this.cookiesPurchasedPerHour = [];
     this.totalcookies = 0;
-    this.totalcookiesShopPerHour = [];
 
     locationArray.push(this);
 }
@@ -44,15 +43,7 @@ Location.prototype.CookiesP = function () {
 
     }
 }
-Location.prototype.TotalsShop = function () {
-    for (let t = 0; t < time.length; t++) {
 
-        this.totalcookiesShopPerHour[t] = seattle.cookiesPurchasedPerHour[t] + tokyo.cookiesPurchasedPerHour[t] + dubai.cookiesPurchasedPerHour[t] + paris.cookiesPurchasedPerHour[t] + lima.cookiesPurchasedPerHour[t]
-
-
-    }
-
-}
 
 
 
@@ -64,36 +55,12 @@ let paris = new Location('paris', 20, 38, 2.3);
 let lima = new Location('lima', 2, 16, 4.6);
 
 
-seattle.RandomCustomerNumber();
-seattle.CookiesP();
-seattle.TotalsShop();
-
-tokyo.RandomCustomerNumber();
-tokyo.CookiesP();
-tokyo.TotalsShop();
-
-dubai.RandomCustomerNumber();
-dubai.CookiesP();
-dubai.TotalsShop();
-
-paris.RandomCustomerNumber();
-paris.CookiesP();
-paris.TotalsShop();
-
-lima.RandomCustomerNumber();
-lima.CookiesP();
-lima.TotalsShop();
-
-
 
 
 
 let divPerant = document.getElementById('first');
 let tableElement = document.createElement('table');
 divPerant.appendChild(tableElement);
-
-
-
 
 
 
@@ -121,7 +88,6 @@ function first() {
     thfElement.textContent = "Daily location /Total";
 }
 
-first();
 
 
 
@@ -134,31 +100,26 @@ Location.prototype.rendered = function () {
 
     let trElement = document.createElement('tr');
     tableElement.appendChild(trElement);
-    let th1Element = document.createElement('th');
-    trElement.appendChild(th1Element);
-    th1Element.textContent = this.name
+    let tdname = document.createElement('td');
+    trElement.appendChild(tdname);
+    tdname.textContent = this.name
 
 
     for (let x = 0; x < time.length; x++) {
         // let trElement=document.createElement('tr');
         // tableElement.appendChild(trElement);
-        let thElement = document.createElement('th');
-        trElement.appendChild(thElement);
-        thElement.textContent = this.cookiesPurchasedPerHour[x];
+        let tdShops = document.createElement('td');
+        trElement.appendChild(tdShops);
+        tdShops.textContent = this.cookiesPurchasedPerHour[x];
 
     }
 
-    let thfElement = document.createElement('th');
+    let thfElement = document.createElement('td');
     trElement.appendChild(thfElement);
     thfElement.textContent = this.totalcookies;
 
 }
 
-seattle.rendered();
-tokyo.rendered();
-dubai.rendered();
-paris.rendered();
-lima.rendered();
 
 
 
@@ -166,35 +127,92 @@ lima.rendered();
 
 
 
-
-
-Location.prototype.final = function () {
-
-
-
+function final() {
+    
+    
     let trElement = document.createElement('tr');
     tableElement.appendChild(trElement);
     let th1Element = document.createElement('th');
     trElement.appendChild(th1Element);
     th1Element.textContent = 'Totals';
-
+    let gegaTotal = 0;
     for (let z = 0; z < time.length; z++) {
+        
+        let totalcookiesEachHour = 0;
 
-
-        let thElement = document.createElement('th');
-        trElement.appendChild(thElement);
-        thElement.textContent = this.totalcookiesShopPerHour[z];
+        for (let q = 0; q < locationArray.length; q++) {
+            
+            totalcookiesEachHour += locationArray[q].cookiesPurchasedPerHour[z];
+            gegaTotal += locationArray[q].cookiesPurchasedPerHour[z];
+            
+        }
+        
+        let finalTh = document.createElement('th');
+        trElement.appendChild(finalTh);
+        finalTh.textContent = totalcookiesEachHour;
+        
     }
-
+    
     let thfElement = document.createElement('th');
     trElement.appendChild(thfElement);
-    thfElement.textContent = seattle.totalcookies + tokyo.totalcookies + dubai.totalcookies + paris.totalcookies + lima.totalcookies;
+    thfElement.textContent = gegaTotal
+    
+}
 
+//get the Element by its id 
+let parent = document.getElementById('userEvent');
+
+//add event listener 
+userEvent.addEventListener('submit', submitter);
+
+
+//create a submitter function , it just run when click the submit button .
+function submitter(event) {
+    
+    event.preventDefault();
+    
+    let name = event.target.place.value;
+    let minCustomer = event.target.min.value;
+    let maxCustomer = event.target.max.value;
+    let avgCookiesPerHour = event.target.avg.value;
+    
+    let userEvent = new Location(name, minCustomer, maxCustomer, avgCookiesPerHour);
+    console.log(userEvent);
+    tableElement.textContent = '';
+    first();
+    for (let h = 0; h < locationArray.length; h++) {
+        locationArray[h].RandomCustomerNumber();
+        locationArray[h].CookiesP();
+        locationArray[h].rendered();
+    }
+    final();
 
 }
 
 
-lima.final();
+
+
+
+
+first();
+
+for (let h = 0; h < locationArray.length; h++) {
+    locationArray[h].RandomCustomerNumber();
+    locationArray[h].CookiesP();
+    locationArray[h].rendered();
+}
+
+final();
+
+
+
+
+
+
+
+
+
+
 
 
 
