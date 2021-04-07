@@ -172,9 +172,9 @@ function submitter(event) {
     event.preventDefault();
     
     let name = event.target.place.value;
-    let minCustomer = event.target.min.value;
-    let maxCustomer = event.target.max.value;
-    let avgCookiesPerHour = event.target.avg.value;
+    let minCustomer = parseInt(event.target.min.value);
+    let maxCustomer = parseInt (event.target.max.value);
+    let avgCookiesPerHour = parseInt(event.target.avg.value);
     
     let userEvent = new Location(name, minCustomer, maxCustomer, avgCookiesPerHour);
     console.log(userEvent);
@@ -187,9 +187,9 @@ function submitter(event) {
     }
     final();
 
+    
+
 }
-
-
 
 
 
