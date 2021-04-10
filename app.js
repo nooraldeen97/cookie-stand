@@ -36,12 +36,14 @@ Location.prototype.RandomCustomerNumber = function () {
 }
 
 Location.prototype.CookiesP = function () {
+    this.totalcookies=0;
     for (let i = 0; i < time.length; i++) {
-
+        
         this.cookiesPurchasedPerHour.push(Math.floor(this.customersNumberPerHour[i] * this.avgCookiesPerHour));
         this.totalcookies = this.totalcookies + this.cookiesPurchasedPerHour[i];
-
+        
     }
+   
 }
 
 
@@ -53,8 +55,6 @@ let tokyo = new Location('tokyo', 3, 24, 1.2);
 let dubai = new Location('dubai', 11, 38, 3.7);
 let paris = new Location('paris', 20, 38, 2.3);
 let lima = new Location('lima', 2, 16, 4.6);
-
-
 
 
 
@@ -111,6 +111,7 @@ Location.prototype.rendered = function () {
         let tdShops = document.createElement('td');
         trElement.appendChild(tdShops);
         tdShops.textContent = this.cookiesPurchasedPerHour[x];
+        console.log(this.cookiesPurchasedPerHour[x]);
 
     }
 
@@ -179,18 +180,22 @@ function submitter(event) {
     let userEvent = new Location(name, minCustomer, maxCustomer, avgCookiesPerHour);
     console.log(userEvent);
     tableElement.textContent = '';
+   
     first();
+   
     for (let h = 0; h < locationArray.length; h++) {
+     
         locationArray[h].RandomCustomerNumber();
         locationArray[h].CookiesP();
         locationArray[h].rendered();
     }
+    
     final();
-
+    
+    
     
 
 }
-
 
 
 

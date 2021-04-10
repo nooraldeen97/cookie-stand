@@ -136,5 +136,29 @@ body{
     }
        
         
-
+#salesheader{
+    background-color:#ff7a00 ;
+    height: 100px;
+    margin-bottom: 50px;
+}
  
+#salesheader div{
+    float: left;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+#salesheader a{
+    float:right;
+    text-decoration: none;
+    background-color:#f9e0ae ;
+    width: 150px;
+    height: 40px;
+   font-size: 20px;
+   border: gray solid 1px;
+   text-align: center;
+   line-height:40px;
+   border-radius: 15px;
+   margin-right:5% ;
+   margin-top: 2%;
+}
