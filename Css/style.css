@@ -1,7 +1,26 @@
 table , th , td , tr{
-    border: solid 2px black;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 3px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
 
+th{
+    background-color:#af5602 ;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+td{
+    background-color: #ff7a00;
+    border-radius: 10px;
+    padding:10px;
+    text-align: center;
+    font-size: 17px;
+    
 }
 body{
     background-color: #ffefcf;
@@ -33,6 +52,9 @@ body{
         text-decoration: none;
         font-weight: 900;
         color: white;
+        font-size: 20px;
+        font-family: 'Comfortaa', cursive;
+
     }
 
     #bigimg{
@@ -138,7 +160,7 @@ body{
         
 #salesheader{
     background-color:#ff7a00 ;
-    height: 100px;
+    height: 130px;
     margin-bottom: 50px;
 }
  
@@ -161,4 +183,61 @@ body{
    border-radius: 15px;
    margin-right:5% ;
    margin-top: 2%;
+   font-family: 'Comfortaa', cursive;
+
 }
+
+legend{
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    color: #ff7a00;
+    font-weight: 900;
+    text-shadow: 2px 1px rgb(170, 170, 170);
+    font-size: 20px;
+}
+
+fieldset{
+    color: #944700;
+    border: #ff7a00 3px solid;
+    margin-bottom: 50px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+
+}
+
+#form{
+display: block;
+text-align: center;
+
+}
+
+#submit{
+    background-color:#f7a75d ;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+footer{
+    background-color:#ff7a00 ;
+    height: 50px ;
+}
+
+
+#sc{
+    display: inline;
+    line-height: 0;
+    width: 200px;
+    
+}
+
+
+#sc h2{
+    font-family: 'Satisfy', cursive;
+    color: rgb(126, 53, 1);
+    text-align: center;
+    font-size: 33px;
+
+}
+

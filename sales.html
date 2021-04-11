@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Css/style.css">
 </head>
 
@@ -12,41 +13,55 @@
 <body>
 
 <header id='salesheader'>
-    <div>
+
+    <div id='sc'>
         <img src="img/salmon.png"
             width="200px" height="70px">
+
+        <h2 >
+            Salmon Cookies
+        </h2>
     </div>
 
     <a href="index.html">Home page</a>
 </header>
+<div id='form'>
     <form action="" id='userEvent'>
         <fieldset>
-            <label for="place">Location name :</label>
+            <legend>
+                ADD A NEW SHOP :
+            </legend>
+            <label for="place">Location name :</label><br>
             <input type="text" id='place' name='place' required>
             <br>
             <br>
-            <label for="min">Minimum customer/ hour :</label>
+            <label for="min">Minimum customer/ hour :</label><br>
             <input type="number" id='min' name="min" required>
             <br>
             <br>
-            <label for="max">Maximum customer/ hous :</label>
+            <label for="max">Maximum customer/ hous :</label><br>
             <input type="number" id='max'name='max'required>
             <br>
             <br>
-            <label for="avg">Average cookies/hour :</label>
+            <label for="avg">Average cookies/hour :</label><br>
             <input type="float" id='avg' name="avg"required>
             <br>
             <br>
-            <input type="submit" value="Click here">
+            <input type="submit" value="Add Shop" id='submit'>
         </fieldset>
     </form>
+
+
+</div>
         
     
 
     <div id="first">
 
     </div>
-    
+    <footer>
+        &copy;2021 cookies shop sales .
+    </footer>
 </body>
 <script src="app.js"></script>
 </html>

@@ -180,11 +180,12 @@ function submitter(event) {
     let userEvent = new Location(name, minCustomer, maxCustomer, avgCookiesPerHour);
     console.log(userEvent);
     tableElement.textContent = '';
-   
+    
+    
     first();
-   
+    
     for (let h = 0; h < locationArray.length; h++) {
-     
+        
         locationArray[h].RandomCustomerNumber();
         locationArray[h].CookiesP();
         locationArray[h].rendered();
